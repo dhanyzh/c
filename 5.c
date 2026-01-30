@@ -9,8 +9,9 @@ int main()
         printf("the number %d devisible by 5\n",a);
 }
     else
+
 {
-        printf("the number %d tnot devisible by 5\n",a);
+        printf("the number %d not devisible by 5\n",a);
 }
     return 0;
 }
