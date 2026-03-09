@@ -3,14 +3,19 @@
 int main()
 {
     int marks[7];
-    for (int i = 1;i <= 7;i++ ){
-        printf("enter the marks  %d :",i);
-        scanf("%d",&marks[i]);
+    for (int i = 0; i < 7; i++)
+    {
+        printf("Enter marks of student %d: ", i + 1);
+        scanf("%d", &marks[i]);
     }
-    for (int i = 0;i <= 7;i++){
-        if (marks[i] < 45){
-            printf("students under 45 : %d\n","roll no. ",i);
+    printf("\nStudents scoring below 45:\n");
+    for (int i = 0; i < 7; i++)
+    {
+        if (marks[i] < 45)
+        {
+            printf("Roll no. %d\n", i + 1);
         }
     }
-    return 0 ;
+
+    return 0;
 }
