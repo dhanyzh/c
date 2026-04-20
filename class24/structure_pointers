@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+typedef struct pokemon{
+    int hp;
+    int speed;
+    char tier;
+}pokemon;
+
+void display(pokemon p){
+    printf("HP: %d\n", p.hp);
+    printf("Speed: %d\n", p.speed);
+    printf("Tier: %c\n", p.tier);
+}
+
+int main(){
+    pokemon pikachu;
+    pikachu.hp = 100;
+    pikachu.speed = 50;
+    pikachu.tier = 'A';
+    display(pikachu);
+    return 0;
+}
