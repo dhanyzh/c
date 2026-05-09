@@ -8,43 +8,46 @@ void insert(){
     }
     else{
         int data;
-        printf("Enter value to insert in stack: ");
-        scanf("%d", &data);
+        printf("Enter your data\n");
+        scanf("%d",&data);
         top++;
         stack[top] = data;
-        printf("%d is inserted in stack\n",data);
-
     }
+
     return;
 }
 
 void pop(){
     if(top == -1){
-        printf("Stack Under Construction\n");
+        printf("Stack Underflow\n");
     }
     else{
-        int val = stack[top];
+        printf("Deleted element: %d\n", stack[top]);
         top--;
-        printf("%d is deleted from stack\n", val);
-        
     }
 }
 
 void display(){
-    if(top == -1){
-        printf("Stack is Empty");
+    if (top == -1){
+        printf("Stack is empty\n");
     }
     else{
-        for(int i=0; i<=top; i++){
+        printf("Stack elements: ");
+        for(int i =0; i<=top; i++){
             printf("%d ", stack[i]);
         }
         printf("\n");
-
     }
     return;
 }
+
 void peek(){
-    printf("Top Location is %d\n", top);
+    if(top == -1){
+        printf("Stack is empty\n");
+    }
+    else{
+        printf("Top element: %d\n", stack[top]);
+    }
 }
 
 int main(){
